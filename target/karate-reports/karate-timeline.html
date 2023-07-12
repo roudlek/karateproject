@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"examples\/animals\/cats\/cats-get[1:2]","start":1689159534220,"end":1689159534391,"title":"examples\/animals\/cats\/cats-get[1:2] 11:58:54.220-11:58:54.391 get all cats"},{"id":2,"group":2,"content":"examples\/animals\/cats\/cats-something-else[1:2]","start":1689159534220,"end":1689159534394,"title":"examples\/animals\/cats\/cats-something-else[1:2] 11:58:54.220-11:58:54.394 something all cats"},{"id":3,"group":3,"content":"examples\/animals\/dogs\/dogs-get[1:2]","start":1689159534220,"end":1689159534387,"title":"examples\/animals\/dogs\/dogs-get[1:2] 11:58:54.220-11:58:54.387 get all dogs"},{"id":4,"group":4,"content":"examples\/users\/users[1:7]","start":1689159534218,"end":1689159535258,"title":"examples\/users\/users[1:7] 11:58:54.218-11:58:55.258 get all users and then get the first user by id"},{"id":5,"group":5,"content":"examples\/users\/users[2:18]","start":1689159534220,"end":1689159535278,"title":"examples\/users\/users[2:18] 11:58:54.220-11:58:55.278 create a user and then get it by id"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
