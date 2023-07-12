@@ -21,10 +21,16 @@
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
-        </dependency>		
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.3.0</version>
+        </dependency>
     </dependencies>
 
     <build>
+<!--        this tells that this is the resources file instead of src/test/resources-->
         <testResources>
             <testResource>
                 <directory>src/test/java</directory>
@@ -46,13 +52,23 @@
                 </configuration>
             </plugin>
             <plugin>
+<!--                https://github.com/karatelabs/karate#:~:text=as%20reportDir()%20etc.-,You,-should%20be%20able-->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
+
+<!--               https://github.com/karatelabs/karate#test-suites     -->
+                    <includes>
+                        <include>officialpackage/AllTestsRunner.java</include>
+                    </includes>
+                    <systemProperties>
+                        <karate.options>--tags @smoke</karate.options>
+                    </systemProperties>
+<!--                    -->
                 </configuration>
-            </plugin>          
+            </plugin>
         </plugins>        
     </build>       
     
