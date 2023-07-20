@@ -1,0 +1,13 @@
+
+
+
+
+
+Given the feature file in attachment
+
+
+2) handle the instantiation of the driver creation in the hook (browser name will be passed as environemnt property)
+1) create the steps definition of the scenario and implement them
+3) implement html reporting
+
+
