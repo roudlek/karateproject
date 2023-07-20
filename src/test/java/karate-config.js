@@ -6,7 +6,9 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+    myVarName: 'someValue',
+    baseUrl: 'https://www.google.com',
+    someJson: {name:"value1",age: "value2"}
   }
   if (env == 'dev') {
     // customize

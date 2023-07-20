@@ -1,4 +1,4 @@
-/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/examples/ExamplesTest.java
-/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/examples/animals/dogs/DogsRunner.java
-/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/examples/animals/cats/CatsRunner.java
-/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/examples/users/UsersRunner.java
+/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/officialpackage/animals/cats/CatsRunner.java
+/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/officialpackage/animals/dogs/DogsRunner.java
+/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/officialpackage/AllTestsRunner.java
+/home/elidrissiabdelaziz/Desktop/karateproject/myproject/src/test/java/officialpackage/users/UsersRunner.java
