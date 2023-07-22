@@ -1,9 +1,11 @@
-Feature: books API operations
+Feature: Token creation feature
 
   Background:
     * def APIClientData = read('classpath:officialpackage/SimpleBooksAPI/APIClientData.json')
     * url 'https://simple-books-api.glitch.me'
-
+#    * config.generatedAccessToken = $generatedAccessToken
+#    * def res = callonce read('classpath:officialpackage/SimpleBooksAPI/books.feature')
+@createToken
   Scenario: verify the creation of token after an authentication
     # JavaScript function to generate a random email address
     * def generateRandomClientEmail =
@@ -53,6 +55,7 @@ Feature: books API operations
     * match APIClientData contains { clientName: '#notnull' }
     * match APIClientData contains { clientEmail: '#regex ^[a-zA-Z0-9._%+-]{1,64}@[a-zA-Z0-9.-]{1,255}\.[a-zA-Z]{2,63}$'} # Validate email format
     * request APIClientData
+    * print karate.request
     When method POST
     Then status 201
     * match $ == '#notnull'
@@ -61,15 +64,6 @@ Feature: books API operations
 
     # Validate access token format (64 characters hexadecimal)
     * match $ == { accessToken: '#regex ^[0-9a-f]{64}$'}
+    * def generatedAccessToken = $.accessToken
 
-    Scenario: verify that 'type' filter works correctly  on the list of books endpoint (check the case 'fiction' and 'non-fiction')
-      Given path '/books'
-      When method GET
-      Then status 200
-      * print karate.response
-      * match karate.response.header('content-type') == 'application/json; charset=utf-8'
-      * match each response contains {type: '#notnull'}
-      * match each $ contains { type: "#notnull"}
-      * def types = ['fiction', 'non-fiction']
-      * match each response contains { type: '#? types.includes(_)' }
 

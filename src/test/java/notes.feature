@@ -80,3 +80,9 @@ using external files:
     * print randomEmail
     * set APIClientData.clientEmail = randomEmail
   With this approach, the JavaScript functions from the external file should be successfully evaluated, and you can use them in your Karate feature without the "Missing close quote" error.
+
+
+#
+#    * print accessToken
+      # Store the generatedAccessToken in a global variable
+#    * karate.set('generatedAccessToken', result.response.accessToken)
