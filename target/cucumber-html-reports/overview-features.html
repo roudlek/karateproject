@@ -41,17 +41,161 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Error Page</title>
+<title>Cucumber Reports  - Features Overview</title>
 
 
-  <style>
-  .error-message {
-    color:red;
-    font-weight: bold;
-    background-color: lightpink;
-    font-family: monospace;
-  }
-  </style>
+  <script>
+$(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                80,
+                0,
+                0,
+                0,
+                0
+            ],
+            backgroundColor: [
+                "#00B000",
+                "#FF3030",
+                "#88AAFF",
+                "#F5F28F",
+                "#F5B975"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed",
+            "Skipped",
+            "Pending",
+            "Undefined"
+        ]
+    };
+
+    var context = document.getElementById("steps-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Steps"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 80) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});$(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                3,
+                0
+            ],
+            backgroundColor: [
+                "#00B000",
+                "#FF3030"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed"
+        ]
+    };
+
+    var context = document.getElementById("scenarios-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Scenarios"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});$(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                   1,
+                   0
+               ],
+               backgroundColor: [
+                "#00B000",
+                "#FF3030"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed"
+        ]
+    };
+
+    var context = document.getElementById("features-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Features"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  </script>
 </head>
 
 <body>
@@ -61,7 +205,7 @@ $(document).ready(function() {
     <div class="collapse navbar-collapse">
       <p class="navbar-text navbar-left">Cucumber Report</p>
       <ul class="nav navbar-nav navbar-right">
-        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation"  class="active" ><a href="overview-features.html">Features</a></li>
         <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
         <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
         <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
@@ -84,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>KarateBaseFramework</td>
-      <td>19 Jul 2023, 17:18</td>
+      <td>24 Jul 2023, 15:18</td>
     </tr>
   </tbody>
 </table>
@@ -97,96 +241,143 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Error</h2>
-      <p>Something went wrong with project KarateBaseFramework, build $build_number</p>
+    <h2>Features Statistics</h2>
+      <p>The following graphs show passing and failing statistics for features</p>
   </div>
 </div>
+
+
+  <div class="container-fluid" id="charts">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div id="featureChartCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#featureChartCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#featureChartCarousel" data-slide-to="1"></li>
+            <li data-target="#featureChartCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <canvas id="features-chart" height="120"></canvas>
+            </div>
+
+            <div class="item">
+              <canvas id="scenarios-chart" height="120"></canvas>
+            </div>
+
+            <div class="item">
+              <canvas id="steps-chart" height="120"></canvas>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#featureChartCarousel" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#featureChartCarousel" role="button" data-slide="next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+
 
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <div class="message">
-        <pre>net.masterthought.cucumber.ValidationException: None report file was added!
-	at net.masterthought.cucumber.ReportParser.parseJsonFiles(ReportParser.java:61)
-	at net.masterthought.cucumber.ReportBuilder.generateReports(ReportBuilder.java:93)
-	at officialpackage.AllTestsRunner.generateReport(AllTestsRunner.java:46)
-	at officialpackage.AllTestsRunner.testParallel(AllTestsRunner.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-</pre>
-      </div>
-      <div>Trying to generate report from following files. Make sure they are valid cucumber report files:</div>
-      <div class="error-files">
-        <pre>
-        </pre>
-      </div>
+
+<table id="tablesorter" class="stats-table table-hover">
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+  <tbody>
+      <tr>
+        <td class="tagname"><a href="report-feature_853260992.html">officialpackage/SimpleBooksAPI/BookOrderingProcess.feature</a></td>
+
+        <td      class="passed"    >80</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">80</td>
+
+        <td  class="passed"    >3</td>
+        <td >0</td>
+        <td class="total">3</td>
+
+        <td class="duration" data-value="9951972527">9.951</td>
+        <td class="passed">Passed</td>
+      </tr>
+  </tbody>
+
+  <tfoot class="total">
+    <tr>
+      <td></td>
+      <td>80</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>80</td>
+
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+
+      <td class="duration">9.951</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
+    </tr>
+  </tfoot>
+</table>
+
     </div>
   </div>
 </div>
-
 
 <nav class="navbar navbar-default" id="footer">
   <div class="container-fluid">
