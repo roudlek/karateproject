@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-class AllTestsRunner {
+class KarateRunner {
     @Test
     void testParallel() {
         Results results = Runner.path("classpath:officialpackage/SimpleBooksAPI/BookOrderingProcess.feature")
