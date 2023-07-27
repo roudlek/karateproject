@@ -64,5 +64,3 @@ Feature: Token creation feature
     # Validate access token format (64 characters hexadecimal)
     * match $ == { accessToken: '#regex ^[0-9a-f]{64}$'}
     * def generatedAccessToken = $.accessToken
-
-

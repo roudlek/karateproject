@@ -21,12 +21,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   capture_pageview:false,
   api_transport:'sendBeacon',
   loaded: function(posthog) { 
-    posthog.capture("report_feature",{distinct_id:"b0395e26-1ef7-4a9d-8520-dd631c101dc2",karate_version:"1.4.0",karate_meta:null});
+    posthog.capture("report_feature",{distinct_id:"b0395e26-1ef7-4a9d-8520-dd631c101dc2",karate_version:"1.4.0",karate_meta:"intellij:1.7.5.353-211"});
   }
 });
 </script>
 
-    <title>officialpackage.SimpleBooksAPI.BookOrderingProcess</title>
+    <title>src.test.java.officialpackage.SimpleBooksAPI.BookOrderingProcess</title>
   </head>
   <body>
     <div id="root-container">
@@ -38,7 +38,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">3</div>
+      <div id="nav-pass" class="bg-success">1</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
@@ -49,19 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2023-07-26 05:58:12 PM</div>
+    <div>2023-07-27 05:30:49 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:10]"><span>[1:10]</span> <span>verify that &#39;type&#39; filter works correctly on the list of books endpoint (check the case &#39;fiction&#39; and &#39;non-fiction&#39;)</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[2:21]"><span>[2:21]</span> <span>verify the successful creation of an order with an available book (book in stock)</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[3:37]"><span>[3:37]</span> <span>verify the unsuccessful creation of order when the book is out of stock</span></a>
+            <a href="#[1:11]"><span>[1:11]</span> <span>verify that &#39;type&#39; filter works correctly on the list of books endpoint (check the case &#39;fiction&#39; and &#39;non-fiction&#39;)</span></a>
           </div>
         </div>
       </div>
@@ -70,34 +64,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">officialpackage/SimpleBooksAPI/BookOrderingProcess.feature</span><span class="feature-label">|</span>
+          <span class="feature-path">src/test/java/officialpackage/SimpleBooksAPI/BookOrderingProcess.feature</span><span class="feature-label">|</span>
           <span class="feature-name">Book ordering process</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:10]">
+          <div class="scenario-heading" id="[1:11]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:10]</span>
+                Scenario: <span>[1:11]</span>
                 <span class="scenario-name">verify that &#39;type&#39; filter works correctly on the list of books endpoint (check the case &#39;fiction&#39; and &#39;non-fiction&#39;)</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>3452</span>
+              <span>ms:</span>&nbsp;<span>2814</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:10]bg">
+            <div class="step-container" id="[1:11]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
@@ -119,14 +113,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.3">17:58:09.291 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.3">17:30:46.742 karate.env system property was: null 
 </div>   
 
   
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
@@ -139,7 +133,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def tokenCreationFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1550</div>
+    <div class="time-cell passed">1336</div>
   </div>
 
    
@@ -148,7 +142,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">17:58:10.849 &lt;&lt; lock released, cached callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)
+  <div class="preformatted" data-parent="0.4">17:30:48.104 &lt;&lt; lock released, cached callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)
 </div>   
 
   <div>
@@ -159,7 +153,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">officialpackage.SimpleBooksAPI.tokenCreationFeature</div>
       </div>
-      <div class="time-cell passed">1517</div>
+      <div class="time-cell passed">1312</div>
     </div>
     <div>
       <div><div>
@@ -175,7 +169,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def APIClientData = read(&#39;classpath:officialpackage/SimpleBooksAPI/APIClientData.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">41</div>
+    <div class="time-cell passed">32</div>
   </div>
 
    
@@ -184,7 +178,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4.0.call.0.4">17:58:09.319 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)
+  <div class="preformatted" data-parent="0.4.0.call.0.4">17:30:46.781 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)
 </div>   
 
   
@@ -204,7 +198,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url &#39;https://simple-books-api.glitch.me&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -239,7 +233,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def generateRandomClientEmail =</span>
       </div>
     </div>
-    <div class="time-cell passed">26</div>
+    <div class="time-cell passed">24</div>
   </div>
 
    
@@ -357,7 +351,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>set APIClientData.clientEmail = generateRandomClientEmail()</span>
       </div>
     </div>
-    <div class="time-cell passed">27</div>
+    <div class="time-cell passed">31</div>
   </div>
 
    
@@ -385,7 +379,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>set APIClientData.clientName = generateRandomClientName()</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -413,7 +407,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match APIClientData contains { clientName: &#39;#notnull&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">9</div>
+    <div class="time-cell passed">12</div>
   </div>
 
    
@@ -497,7 +491,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">1400</div>
+    <div class="time-cell passed">1202</div>
   </div>
 
    
@@ -506,25 +500,25 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4.0.call.0.58">17:58:09.761 request:
+  <div class="preformatted" data-parent="0.4.0.call.0.58">17:30:47.165 request:
 1 &gt; POST https://simple-books-api.glitch.me/api-clients
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 105
+1 &gt; Content-Length: 101
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;clientName&quot;:&quot;pqriraiknn&quot;,&quot;clientEmail&quot;:&quot;nxhu3q04ifk@zr0vlrur0s.IICUEXCKvQyPWDHUcNcKMRFccTAdrbMzdGfMob&quot;}
+{&quot;clientName&quot;:&quot;lfczv&quot;,&quot;clientEmail&quot;:&quot;z8hsxjmsxh@hcg8rzdfes6.GZVzmJKBCeJKFeJlApFAqBVGtqvgLOEtXeBstTx&quot;}
 
-17:58:10.835 response time in milliseconds: 1063
+17:30:48.095 response time in milliseconds: 921
 1 &lt; 201
-1 &lt; Date: Wed, 26 Jul 2023 16:58:10 GMT
+1 &lt; Date: Thu, 27 Jul 2023 16:30:48 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 82
 1 &lt; Connection: keep-alive
 1 &lt; x-powered-by: Express
-1 &lt; etag: W/&quot;52-mcUGLRu0JqvI8KTfnzSvEcbmSmE&quot;
-{&quot;accessToken&quot;:&quot;46ae617eadd358fedc7317d6b4cb47d844b9fcf0fb81802c288d36304ccbbfab&quot;}
+1 &lt; etag: W/&quot;52-SNG+IBT5vbbtwPwLteuYADAd8sg&quot;
+{&quot;accessToken&quot;:&quot;c492a0d10435bf9c0e398cdfc34ddde918315bbb1f20e6d648f5dff5f8d1501a&quot;}
 
 </div>   
 
@@ -573,7 +567,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match $ == &#39;#notnull&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -664,7 +658,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match $ == { accessToken: &#39;#regex ^[0-9a-f]{64}$&#39;}</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -692,7 +686,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def generatedAccessToken = $.accessToken</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -712,7 +706,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
@@ -725,7 +719,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def availableBooksFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">505</div>
+    <div class="time-cell passed">516</div>
   </div>
 
    
@@ -734,7 +728,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5">17:58:11.356 &lt;&lt; lock released, cached callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)
+  <div class="preformatted" data-parent="0.5">17:30:48.621 &lt;&lt; lock released, cached callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)
 </div>   
 
   <div>
@@ -745,7 +739,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">officialpackage.SimpleBooksAPI.avaiableBooks</div>
       </div>
-      <div class="time-cell passed">488</div>
+      <div class="time-cell passed">507</div>
     </div>
     <div>
       <div><div>
@@ -761,7 +755,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url &#39;https://simple-books-api.glitch.me&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -770,7 +764,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5.0.call.0.3">17:58:10.855 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)
+  <div class="preformatted" data-parent="0.5.0.call.0.3">17:30:48.108 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)
 </div>   
 
   
@@ -818,7 +812,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">473</div>
+    <div class="time-cell passed">479</div>
   </div>
 
    
@@ -827,7 +821,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5.0.call.0.6">17:58:10.869 request:
+  <div class="preformatted" data-parent="0.5.0.call.0.6">17:30:48.115 request:
 1 &gt; GET https://simple-books-api.glitch.me/books
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
@@ -835,9 +829,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-17:58:11.337 response time in milliseconds: 467
+17:30:48.588 response time in milliseconds: 471
 1 &lt; 200
-1 &lt; Date: Wed, 26 Jul 2023 16:58:11 GMT
+1 &lt; Date: Thu, 27 Jul 2023 16:30:48 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 417
 1 &lt; Connection: keep-alive
@@ -892,7 +886,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match karate.response.header(&#39;content-type&#39;) == &#39;application/json; charset=utf-8&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">10</div>
   </div>
 
    
@@ -920,7 +914,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def availableBooks = karate.filter(response, function(x){ return x.available == true })</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -948,7 +942,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match availableBooks != null</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -976,7 +970,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def bookToOrder = availableBooks[0]</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1004,7 +998,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match $ == &#39;#notnull&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1024,7 +1018,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
@@ -1037,7 +1031,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def unavailableBooksFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">472</div>
+    <div class="time-cell passed">481</div>
   </div>
 
    
@@ -1046,7 +1040,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6">17:58:11.828 &lt;&lt; lock released, cached callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)
+  <div class="preformatted" data-parent="0.6">17:30:49.102 &lt;&lt; lock released, cached callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)
 </div>   
 
   <div>
@@ -1057,7 +1051,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">officialpackage.SimpleBooksAPI.unavaiableBooks</div>
       </div>
-      <div class="time-cell passed">463</div>
+      <div class="time-cell passed">470</div>
     </div>
     <div>
       <div><div>
@@ -1082,7 +1076,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6.0.call.0.3">17:58:11.358 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)
+  <div class="preformatted" data-parent="0.6.0.call.0.3">17:30:48.624 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)
 </div>   
 
   
@@ -1130,7 +1124,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">455</div>
+    <div class="time-cell passed">462</div>
   </div>
 
    
@@ -1139,7 +1133,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6.0.call.0.6">17:58:11.365 request:
+  <div class="preformatted" data-parent="0.6.0.call.0.6">17:30:48.632 request:
 1 &gt; GET https://simple-books-api.glitch.me/books
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
@@ -1147,9 +1141,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-17:58:11.818 response time in milliseconds: 451
+17:30:49.091 response time in milliseconds: 456
 1 &lt; 200
-1 &lt; Date: Wed, 26 Jul 2023 16:58:11 GMT
+1 &lt; Date: Thu, 27 Jul 2023 16:30:49 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 417
 1 &lt; Connection: keep-alive
@@ -1204,7 +1198,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match karate.response.header(&#39;content-type&#39;) == &#39;application/json; charset=utf-8&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1342,8 +1336,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;/books&#39;</span>
@@ -1370,14 +1364,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">889</div>
+    <div class="time-cell passed">443</div>
   </div>
 
    
@@ -1386,7 +1380,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.12">17:58:11.830 request:
+  <div class="preformatted" data-parent="0.13">17:30:49.104 request:
 1 &gt; GET https://simple-books-api.glitch.me/books
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
@@ -1394,9 +1388,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-17:58:12.715 response time in milliseconds: 882
+17:30:49.543 response time in milliseconds: 437
 1 &lt; 200
-1 &lt; Date: Wed, 26 Jul 2023 16:58:12 GMT
+1 &lt; Date: Thu, 27 Jul 2023 16:30:49 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 417
 1 &lt; Connection: keep-alive
@@ -1416,8 +1410,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1451,14 +1445,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.15">
-      <div class="step-ref passed">15</div>
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match karate.response.header(&#39;content-type&#39;) == &#39;application/json; charset=utf-8&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1486,42 +1480,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match each $ contains { type: &quot;#notnull&quot;}</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def validTypes = [&#39;fiction&#39;, &#39;non-fiction&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">10</div>
   </div>
 
    
@@ -1546,1005 +1512,38 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">19</div>
       
       <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def validTypes = [&#39;fiction&#39;, &#39;non-fiction&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match each response contains { type: &#39;#? validTypes.includes(_)&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">25</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2:21]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2:21]</span>
-                <span class="scenario-name">verify the successful creation of an order with an available book (book in stock)</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>3642</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2:21]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2:21]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.3">
-      <div class="step-ref bg-step">3</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;https://simple-books-api.glitch.me&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.3">17:58:09.286 karate.env system property was: null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:21]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def tokenCreationFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1550</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.4">17:58:10.850 this thread waited 1530 milliseconds for callonce lock: read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:21]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBooksFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">506</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.5">17:58:11.356 this thread waited 501 milliseconds for callonce lock: read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:21]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def unavailableBooksFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">472</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.6">17:58:11.829 this thread waited 468 milliseconds for callonce lock: read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref passed">22</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;/orders&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Call the scenario that generates the access token and store the response in a variable</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.24">
-      <div class="step-ref passed">24</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def generatedAccessToken = tokenCreationFeature.response.accessToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Extract the access token from the response and store it in a variable</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.26">
-      <div class="step-ref passed">26</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + generatedAccessToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.27">
-      <div class="step-ref passed">27</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerName = tokenCreationFeature.APIClientData.clientName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.28">
-      <div class="step-ref passed">28</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def firstAvailableBookID = availableBooksFeature.bookToOrder.id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.29">
-      <div class="step-ref passed">29</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print firstAvailableBookID</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.29">17:58:11.839 [print] 1 
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref passed">30</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>request { &quot;bookId&quot;: &#39;#(firstAvailableBookID)&#39;, &quot;customerName&quot;: &#39;#(customerName)&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.31">
-      <div class="step-ref passed">31</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1093</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.31">17:58:11.844 request:
-1 &gt; POST https://simple-books-api.glitch.me/orders
-1 &gt; Authorization: Bearer 46ae617eadd358fedc7317d6b4cb47d844b9fcf0fb81802c288d36304ccbbfab
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 40
-1 &gt; Host: simple-books-api.glitch.me
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;bookId&quot;:1,&quot;customerName&quot;:&quot;pqriraiknn&quot;}
-
-17:58:12.932 response time in milliseconds: 1086
-1 &lt; 201
-1 &lt; Date: Wed, 26 Jul 2023 16:58:12 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 50
-1 &lt; Connection: keep-alive
-1 &lt; x-powered-by: Express
-1 &lt; etag: W/&quot;32-bty3pSX2fxL/8Lr8ZnExLW5ErMU&quot;
-{&quot;created&quot;:true,&quot;orderId&quot;:&quot;rCDGeJQ_i2GgjoMQLzj3C&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref passed">32</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>status 201</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.33">
-      <div class="step-ref passed">33</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match $ == &#39;#notnull&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.34">
-      <div class="step-ref passed">34</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match $ contains {orderId: &#39;#notnull&#39;}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.35">
-      <div class="step-ref passed">35</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match $ contains {orderId: &#39;#string&#39;}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[3:37]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[3:37]</span>
-                <span class="scenario-name">verify the unsuccessful creation of order when the book is out of stock</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>3419</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[3:37]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[3:37]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.3">
-      <div class="step-ref bg-step">3</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;https://simple-books-api.glitch.me&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.3">17:58:09.267 karate.env system property was: null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:37]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def tokenCreationFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1551</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.4">17:58:10.849 this thread waited 1530 milliseconds for callonce lock: read(&#39;classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature&#39;)
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:37]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBooksFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">506</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.5">17:58:11.356 this thread waited 501 milliseconds for callonce lock: read(&#39;classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature&#39;)
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:37]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def unavailableBooksFeature = callonce read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">472</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.6">17:58:11.828 this thread waited 468 milliseconds for callonce lock: read(&#39;classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature&#39;)
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.38">
-      <div class="step-ref passed">38</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;/orders&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Call the scenario that generates the access token and store the response in a variable</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.40">
-      <div class="step-ref passed">40</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def generatedAccessToken = tokenCreationFeature.response.accessToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Extract the access token from the response and store it in a variable</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.42">
-      <div class="step-ref passed">42</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + generatedAccessToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.43">
-      <div class="step-ref passed">43</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerName = tokenCreationFeature.APIClientData.clientName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.44">
-      <div class="step-ref passed">44</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def firstUnavailableBookID = unavailableBooksFeature.bookToOrder.id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.45">
-      <div class="step-ref passed">45</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>request { &quot;bookId&quot;: &#39;#(firstUnavailableBookID)&#39;, &quot;customerName&quot;: &#39;#(customerName)&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.46">
-      <div class="step-ref passed">46</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
-      </div>
-    </div>
-    <div class="time-cell passed">876</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.46">17:58:11.844 request:
-1 &gt; POST https://simple-books-api.glitch.me/orders
-1 &gt; Authorization: Bearer 46ae617eadd358fedc7317d6b4cb47d844b9fcf0fb81802c288d36304ccbbfab
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 40
-1 &gt; Host: simple-books-api.glitch.me
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;bookId&quot;:2,&quot;customerName&quot;:&quot;pqriraiknn&quot;}
-
-17:58:12.715 response time in milliseconds: 869
-1 &lt; 404
-1 &lt; Date: Wed, 26 Jul 2023 16:58:12 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 55
-1 &lt; Connection: keep-alive
-1 &lt; x-powered-by: Express
-1 &lt; etag: W/&quot;37-EwJEhBGIU3KiOH3ypr8c6yRFaMQ&quot;
-{&quot;error&quot;:&quot;This book is not in stock. Try again later.&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.47">
-      <div class="step-ref passed">47</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>status 404</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match $ == &#39;#notnull&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.49">
-      <div class="step-ref passed">49</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match $ contains {error: &#39;#notnull&#39;}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.50">
-      <div class="step-ref passed">50</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match $ !contains {orderId: &#39;#notnull&#39;}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">26</div>
   </div>
 
    

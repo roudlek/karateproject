@@ -7,6 +7,7 @@ Feature: Book ordering process
 
 #    * def books = call read('classpath:officialpackage/SimpleBooksAPI/books.feature@createToken')
 
+#  $ filter
   Scenario: verify that 'type' filter works correctly on the list of books endpoint (check the case 'fiction' and 'non-fiction')
     Given path '/books'
     When method GET
