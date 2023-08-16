@@ -61,15 +61,17 @@
 
 <!--               https://github.com/karatelabs/karate#test-suites     -->
                     <includes>
-                        <include>officialpackage/AllTestsRunner.java</include>
+                        <include>officialpackage/KarateRunner.java</include>
                     </includes>
-                    <systemProperties>
-                        <karate.options>--tags @smoke</karate.options>
-                    </systemProperties>
+
+<!--                    This runs only features files annotated with @smoke-->
+<!--                    <systemProperties>-->
+<!--                        <karate.options>&#45;&#45;tags @smoke</karate.options>-->
+<!--                    </systemProperties>-->
 <!--                    -->
                 </configuration>
             </plugin>
-        </plugins>        
+        </plugins>
     </build>       
     
 </project>

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: officialpackage.AllTestsRunner
+Test set: officialpackage.KarateRunnerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.376 s - in officialpackage.AllTestsRunner
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.442 s - in officialpackage.KarateRunnerTest

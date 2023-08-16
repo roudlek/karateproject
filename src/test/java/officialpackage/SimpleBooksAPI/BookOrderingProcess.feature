@@ -1,3 +1,4 @@
+@smoke
 Feature: Book ordering process
   Background:
     * url 'https://simple-books-api.glitch.me'

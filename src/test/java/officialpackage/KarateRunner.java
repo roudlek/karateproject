@@ -14,12 +14,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 class KarateRunner {
     @Test
     void testParallel() {
         Results results = Runner.path("classpath:officialpackage/SimpleBooksAPI/BookOrderingProcess.feature")
-                .outputCucumberJson(true)
+                 .outputCucumberJson(true)
                 .tags()
                 .parallel(5); //mandatory method
         generateReport(results.getReportDir());
