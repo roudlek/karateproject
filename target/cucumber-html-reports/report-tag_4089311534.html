@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>KarateBaseFramework</td>
-      <td>16 Aug 2023, 18:09</td>
+      <td>17 Aug 2023, 11:02</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">3</td>
 
-          <td class="duration" data-value="1361458332">1.361</td>
+          <td class="duration" data-value="1502125754">1.502</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.443</span>
+  <span class="lead-duration duration">0.382</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">path '/books'</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method GET</span>
 
-  <span class="lead-duration duration">0.384</span>
+  <span class="lead-duration duration">0.348</span>
 
 </div>
 
@@ -269,7 +269,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>18:09:14.922 request:
+        <pre>11:02:06.247 request:
 1 &gt; GET https://simple-books-api.glitch.me/books
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
@@ -277,9 +277,9 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-18:09:15.297 response time in milliseconds: 373
+11:02:06.589 response time in milliseconds: 341
 1 &lt; 200
-1 &lt; Date: Wed, 16 Aug 2023 17:09:15 GMT
+1 &lt; Date: Thu, 17 Aug 2023 10:02:06 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 417
 1 &lt; Connection: keep-alive
@@ -333,7 +333,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">match karate.response.header('content-type') == 'application/json; charset=utf-8'</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -360,7 +360,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">match each $ contains { type: &quot;#notnull&quot;}</span>
 
-  <span class="lead-duration duration">0.030</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -414,7 +414,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">match each response contains { type: '#? validTypes.includes(_)' }</span>
 
-  <span class="lead-duration duration">0.022</span>
+  <span class="lead-duration duration">0.024</span>
 
 </div>
 
@@ -458,7 +458,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.513</span>
+  <span class="lead-duration duration">0.455</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
@@ -501,7 +501,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">path '/orders'</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -555,7 +555,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">header Authorization = 'Bearer ' + generatedAccessToken</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -609,7 +609,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def firstAvailableBookID = availableBooksFeature.bookToOrder.id</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -636,7 +636,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print firstAvailableBookID</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -654,7 +654,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-6" class="collapse collapsable-details">
-        <pre>18:09:14.932 [print] 1 
+        <pre>11:02:06.263 [print] 1 
 </pre>
       </div>
     </div>
@@ -674,7 +674,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">request { &quot;bookId&quot;: '#(firstAvailableBookID)', &quot;customerName&quot;: '#(customerName)' }</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -701,7 +701,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.496</span>
+  <span class="lead-duration duration">0.424</span>
 
 </div>
 
@@ -719,26 +719,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>18:09:14.936 request:
+        <pre>11:02:06.276 request:
 1 &gt; POST https://simple-books-api.glitch.me/orders
-1 &gt; Authorization: Bearer 2b0554fc11a7400a146df1cb7e7953c639a2c064eaf05cce2649afa2170acc0a
+1 &gt; Authorization: Bearer 81d18511996da55031fe8347d1d566b23831aeca1b1d001608fdcd21f6b9b3b0
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 48
+1 &gt; Content-Length: 46
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;bookId&quot;:1,&quot;customerName&quot;:&quot;enubfwgprolbvgvitq&quot;}
+{&quot;bookId&quot;:1,&quot;customerName&quot;:&quot;fkhscexwgpbpfnsi&quot;}
 
-18:09:15.429 response time in milliseconds: 493
+11:02:06.694 response time in milliseconds: 417
 1 &lt; 201
-1 &lt; Date: Wed, 16 Aug 2023 17:09:15 GMT
+1 &lt; Date: Thu, 17 Aug 2023 10:02:06 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 50
 1 &lt; Connection: keep-alive
 1 &lt; x-powered-by: Express
-1 &lt; etag: W/&quot;32-NDC+ccziQTHMP56JJqNm7DwIkYI&quot;
-{&quot;created&quot;:true,&quot;orderId&quot;:&quot;eCqiKgczMLpz4CqFAWYdY&quot;}
+1 &lt; etag: W/&quot;32-DyPKuYMrMvittHzYo9u0SW92JH4&quot;
+{&quot;created&quot;:true,&quot;orderId&quot;:&quot;8ZpNJnpVMwkdbeJ2FHs0X&quot;}
 
 </pre>
       </div>
@@ -884,7 +884,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.404</span>
+  <span class="lead-duration duration">0.664</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
@@ -954,7 +954,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def generatedAccessToken = tokenCreationFeature.response.accessToken</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -1008,7 +1008,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def customerName = tokenCreationFeature.APIClientData.clientName</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -1035,7 +1035,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def firstUnavailableBookID = unavailableBooksFeature.bookToOrder.id</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.012</span>
 
 </div>
 
@@ -1062,7 +1062,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">request { &quot;bookId&quot;: '#(firstUnavailableBookID)', &quot;customerName&quot;: '#(customerName)' }</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -1089,7 +1089,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.384</span>
+  <span class="lead-duration duration">0.625</span>
 
 </div>
 
@@ -1107,20 +1107,20 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-10" class="collapse collapsable-details">
-        <pre>18:09:14.934 request:
+        <pre>11:02:06.279 request:
 1 &gt; POST https://simple-books-api.glitch.me/orders
-1 &gt; Authorization: Bearer 2b0554fc11a7400a146df1cb7e7953c639a2c064eaf05cce2649afa2170acc0a
+1 &gt; Authorization: Bearer 81d18511996da55031fe8347d1d566b23831aeca1b1d001608fdcd21f6b9b3b0
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 48
+1 &gt; Content-Length: 46
 1 &gt; Host: simple-books-api.glitch.me
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;bookId&quot;:2,&quot;customerName&quot;:&quot;enubfwgprolbvgvitq&quot;}
+{&quot;bookId&quot;:2,&quot;customerName&quot;:&quot;fkhscexwgpbpfnsi&quot;}
 
-18:09:15.312 response time in milliseconds: 376
+11:02:06.894 response time in milliseconds: 613
 1 &lt; 404
-1 &lt; Date: Wed, 16 Aug 2023 17:09:15 GMT
+1 &lt; Date: Thu, 17 Aug 2023 10:02:06 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 55
 1 &lt; Connection: keep-alive
@@ -1174,7 +1174,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">match $ == '#notnull'</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -1228,7 +1228,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">match $ !contains {orderId: '#notnull'}</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 

@@ -63,7 +63,6 @@
                     <includes>
                         <include>officialpackage/KarateRunner.java</include>
                     </includes>
-
 <!--                    This runs only features files annotated with @smoke-->
 <!--                    <systemProperties>-->
 <!--                        <karate.options>&#45;&#45;tags @smoke</karate.options>-->

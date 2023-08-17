@@ -697,3 +697,138 @@
 {"created":true,"orderId":"eCqiKgczMLpz4CqFAWYdY"}
 
 18:09:16.162 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:officialpackage/SimpleBooksAPI/BookOrderingProcess.feature
+11:02:02.748 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+11:02:02.758 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1692266522752
+11:02:03.984 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+11:02:04.004 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+11:02:04.009 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+11:02:04.041 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature')
+11:02:04.390 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://simple-books-api.glitch.me/api-clients
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 128
+1 > Host: simple-books-api.glitch.me
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"clientName":"fkhscexwgpbpfnsi","clientEmail":"ri4vqfq8omb@2p3ajkjumfq.lRXQjJetlPGbOIaSAzQGYJauEyUNjITOjDBcqbVxAKEISwoCzNJPLV"}
+
+11:02:05.393 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 995
+1 < 201
+1 < Date: Thu, 17 Aug 2023 10:02:05 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 82
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < etag: W/"52-o87XWICdpvvI1QmGQe26lhcxNFk"
+{"accessToken":"81d18511996da55031fe8347d1d566b23831aeca1b1d001608fdcd21f6b9b3b0"}
+
+11:02:05.406 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature')
+11:02:05.407 [pool-1-thread-3] WARN  com.intuit.karate - this thread waited 1366 milliseconds for callonce lock: read('classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature')
+11:02:05.407 [pool-1-thread-2] WARN  com.intuit.karate - this thread waited 1366 milliseconds for callonce lock: read('classpath:officialpackage/SimpleBooksAPI/tokenCreationFeature.feature')
+11:02:05.412 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature')
+11:02:05.424 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > GET https://simple-books-api.glitch.me/books
+1 > Host: simple-books-api.glitch.me
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+11:02:05.785 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 359
+1 < 200
+1 < Date: Thu, 17 Aug 2023 10:02:05 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 417
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < etag: W/"1a1-MfqhfTYtZO2sguD1mJq8Vf41WjU"
+[{"id":1,"name":"The Russian","type":"fiction","available":true},{"id":2,"name":"Just as I Am","type":"non-fiction","available":false},{"id":3,"name":"The Vanishing Half","type":"fiction","available":true},{"id":4,"name":"The Midnight Library","type":"fiction","available":true},{"id":5,"name":"Untamed","type":"non-fiction","available":true},{"id":6,"name":"Viscount Who Loved Me","type":"fiction","available":true}]
+
+11:02:05.833 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature')
+11:02:05.834 [pool-1-thread-2] WARN  com.intuit.karate - this thread waited 421 milliseconds for callonce lock: read('classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature')
+11:02:05.834 [pool-1-thread-3] WARN  com.intuit.karate - this thread waited 421 milliseconds for callonce lock: read('classpath:officialpackage/SimpleBooksAPI/avaiableBooks.feature')
+11:02:05.840 [pool-1-thread-2] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature')
+11:02:05.851 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > GET https://simple-books-api.glitch.me/books
+1 > Host: simple-books-api.glitch.me
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+11:02:06.197 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 345
+1 < 200
+1 < Date: Thu, 17 Aug 2023 10:02:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 417
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < etag: W/"1a1-MfqhfTYtZO2sguD1mJq8Vf41WjU"
+[{"id":1,"name":"The Russian","type":"fiction","available":true},{"id":2,"name":"Just as I Am","type":"non-fiction","available":false},{"id":3,"name":"The Vanishing Half","type":"fiction","available":true},{"id":4,"name":"The Midnight Library","type":"fiction","available":true},{"id":5,"name":"Untamed","type":"non-fiction","available":true},{"id":6,"name":"Viscount Who Loved Me","type":"fiction","available":true}]
+
+11:02:06.235 [pool-1-thread-2] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature')
+11:02:06.237 [pool-1-thread-3] WARN  com.intuit.karate - this thread waited 397 milliseconds for callonce lock: read('classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature')
+11:02:06.239 [pool-1-thread-1] WARN  com.intuit.karate - this thread waited 399 milliseconds for callonce lock: read('classpath:officialpackage/SimpleBooksAPI/unavaiableBooks.feature')
+11:02:06.246 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > GET https://simple-books-api.glitch.me/books
+1 > Host: simple-books-api.glitch.me
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+11:02:06.262 [pool-1-thread-2] INFO  com.intuit.karate - [print] 1 
+11:02:06.275 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://simple-books-api.glitch.me/orders
+1 > Authorization: Bearer 81d18511996da55031fe8347d1d566b23831aeca1b1d001608fdcd21f6b9b3b0
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 46
+1 > Host: simple-books-api.glitch.me
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"bookId":1,"customerName":"fkhscexwgpbpfnsi"}
+
+11:02:06.278 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > POST https://simple-books-api.glitch.me/orders
+1 > Authorization: Bearer 81d18511996da55031fe8347d1d566b23831aeca1b1d001608fdcd21f6b9b3b0
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 46
+1 > Host: simple-books-api.glitch.me
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"bookId":2,"customerName":"fkhscexwgpbpfnsi"}
+
+11:02:06.589 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 341
+1 < 200
+1 < Date: Thu, 17 Aug 2023 10:02:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 417
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < etag: W/"1a1-MfqhfTYtZO2sguD1mJq8Vf41WjU"
+[{"id":1,"name":"The Russian","type":"fiction","available":true},{"id":2,"name":"Just as I Am","type":"non-fiction","available":false},{"id":3,"name":"The Vanishing Half","type":"fiction","available":true},{"id":4,"name":"The Midnight Library","type":"fiction","available":true},{"id":5,"name":"Untamed","type":"non-fiction","available":true},{"id":6,"name":"Viscount Who Loved Me","type":"fiction","available":true}]
+
+11:02:06.694 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 417
+1 < 201
+1 < Date: Thu, 17 Aug 2023 10:02:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 50
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < etag: W/"32-DyPKuYMrMvittHzYo9u0SW92JH4"
+{"created":true,"orderId":"8ZpNJnpVMwkdbeJ2FHs0X"}
+
+11:02:06.893 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 613
+1 < 404
+1 < Date: Thu, 17 Aug 2023 10:02:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < etag: W/"37-EwJEhBGIU3KiOH3ypr8c6yRFaMQ"
+{"error":"This book is not in stock. Try again later."}
+
+11:02:07.768 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:officialpackage/SimpleBooksAPI/BookOrderingProcess.feature
